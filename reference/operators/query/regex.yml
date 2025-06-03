@@ -1,0 +1,83 @@
+## YamlMime:NoSQLQueryReference
+type: operator
+name: regex
+description: |
+  The `$regex` operator is used to perform pattern matching with regular expressions.
+summary: |
+  This operator is useful for querying string fields for matches that fit specific patterns. Common use cases include searching for documents where a field contains a substring, starts with a certain prefix, or matches a complex pattern.
+syntax: |
+  { 
+    "field": { 
+      $regex: /pattern/, 
+      $options: '<options>' 
+    }
+  }
+parameters:
+  - name: field
+    type: string
+    required: true
+    description: |
+      The field in the document to apply the regular expression to. This should be a string field that you want to match against the provided pattern.
+  - name: $regex
+    type: pattern
+    required: true
+    description: |
+      The regular expression pattern to match.
+  - name: $options
+    type: string
+    required: false
+    description: |
+      Flags to modify the behavior of the regex. Common options include, but are not limited to `i` for case-insensitive matching, `m` for multiline matching, etc.
+examples:
+  sample:
+    type: stores
+    query: |
+      db.stores.find({
+        "storeName": {
+          $regex: /Supermart/i,
+          $options: 'i'
+        }
+      })
+  items:
+    - title: Find documents with a specific substring
+      explanation: |
+        Use the `$regex` operator to find all documents that match a specific pattern.
+      description: |
+        In this example, the operator filters to documents that contain the exact phrase `Home` in its name.
+      query: |
+        db.stores.find({ "name": { "$regex": /Home/ }})
+      output:
+        type: json
+        value: |
+          [
+            {
+              "_id": "aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb",
+              "name": "Proseware, Inc. | Home Entertainment Hub - East Linwoodbury"
+            },
+            {
+              "_id": "bbbbbbbb-1111-2222-3333-cccccccccccc",
+              "name": "Fabrikam, Inc. | Home Accessory Outlet - West Adele"
+            }
+          ]
+    - title: Find documents using a case-insensitive match
+      explanation: |
+        The `$regex` operator includes options like case-insensitive search.
+      description: |
+        In this example, the operator filters to documents that contain the case-insensitive phrase `outlet` in its name.
+      query: |
+        db.stores.find({ "name": { $regex: /outlet/, $options: "i" }})
+      output:
+        type: json
+        value: |
+          [
+            {
+              "_id": "bbbbbbbb-1111-2222-3333-cccccccccccc",
+              "name": "Fabrikam, Inc. | Home Accessory Outlet - West Adele"
+            },
+            {
+              "_id": "cccccccc-2222-3333-4444-dddddddddddd",
+              "name": "Wide World Importers | Fitness Equipment Outlet - Reillyborough"
+            }
+          ]
+related:
+  - reference: /commands/aggregation/count

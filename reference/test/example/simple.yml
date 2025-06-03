@@ -1,0 +1,42 @@
+## YamlMime:NoSQLQueryReference
+type: none
+name: simple
+description: TODO
+summary: TODO
+syntax: TODO
+parameters:
+examples:
+  sample:
+    type: products
+    query: |
+      db.products.find({
+        "category": {
+          $regex: /gear-surf-surfboards/,
+          $options: 'i'
+        }
+      });
+  items:
+    - title: This is a very basic example
+      explanation: |
+        TODO
+      description: |
+        TODO
+      query: |
+        db.products.aggregate([
+          {
+            $match: {
+              category: "gear-surf-surfboards"
+            }
+          },
+          {
+            $count: "totalProducts"
+          }
+        ]);
+      output:
+        type: json
+        value: |
+          [
+            {
+              totalProducts: 1
+            }
+          ]
