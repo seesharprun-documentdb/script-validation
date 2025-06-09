@@ -22,10 +22,6 @@ jobs:
         with:
           dotnet-version: | 
             10.x
-      - name: Install .NET tools
-        run: |
-          dotnet new tool-manifest
-          dotnet tool install --local DotnetCtrfJsonReporter
       - name: Install Mongo shell
         run: |
           sudo apt-get install gnupg
@@ -48,7 +44,7 @@ jobs:
       - name: Generate CTRF test report
         working-directory: utilities
         run: |
-          dotnet tool run DotnetCtrfJsonReporter --test-tool "mstest" --trx-path "tst/results.trx" --output-directory "ctrf" --output-filename "report.json"
+          dotnet run generate.cs "tst/results.trx" --output-directory "ctrf" --output-filename "report.json" --test-tool "mstest"
       - name: Publish CTRF test report
         uses: ctrf-io/github-test-reporter@v1
         with:

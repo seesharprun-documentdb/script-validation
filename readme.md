@@ -1,4 +1,14 @@
-# Repro
+# Validate MongoDB commands/operators
+
+## Tool
+
+Derived from https://github.com/ctrf-io/dotnet-ctrf-json-reporter
+
+## Validation
+
+.NET script
+
+## Steps
 
 ```bash
 docker run --detach --tty --publish 10260:10260 --env USERNAME="<username>" --env PASSWORD="<password>" ghcr.io/microsoft/documentdb/documentdb-local:latest

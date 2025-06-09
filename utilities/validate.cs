@@ -38,10 +38,8 @@ public class QueryLanguageTests
         string actual = response.Trim();
 
         // Assert
-        Console.WriteLine($"ACTUAL:\t{actual}");
         if (expected is not null)
         {
-            Console.WriteLine($"EXPECTED:\t{expected}");
             bool match = String.Equals(actual, expected, StringComparison.OrdinalIgnoreCase);
             Assert.IsTrue(match, $"The output of query {command} for [{unit}] should match the expected output: {expected}.");
         }

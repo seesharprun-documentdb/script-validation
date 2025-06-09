@@ -3,7 +3,7 @@
     <EnableMSTestRunner>true</EnableMSTestRunner>
     <TestingPlatformDotnetTestSupport>true</TestingPlatformDotnetTestSupport>
     <EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>
-    <NoWarn>CA1050;</NoWarn>
+    <NoWarn>CA1050;CA1822</NoWarn>
   </PropertyGroup>
   <ItemGroup>
     <EmbeddedResource Include="../samples/**/*.mongo">
