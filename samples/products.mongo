@@ -1,0 +1,1745 @@
+db.products.insertMany([
+  {
+    _id: "00000000-0000-0000-0000-000000005001",
+    name: "Mountain-100 Black, 44",
+    description: "Top-of-the-line competition mountain bike. Performance-enhancing options include the innovative HL Frame, super-smooth front suspension, and traction for all terrain.",
+    category: "Bikes",
+    subCategory: "Mountain Bikes",
+    sku: "BK-M82B-44",
+    tags: [
+      "Bikes",
+      "Mountain Bikes",
+      "Black",
+      "44"
+    ],
+    cost: 1898.0944,
+    price: 3374.9900,
+    quantity: 9982,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005002",
+    name: "LL Road Frame - Black, 60",
+    description: "The LL Frame provides a safe comfortable ride, while offering superior bump absorption in a value-priced aluminum frame.",
+    category: "Components",
+    subCategory: "Road Frames",
+    sku: "FR-R38B-60",
+    tags: [
+      "Components",
+      "Road Frames",
+      "Black",
+      "60"
+    ],
+    cost: 204.6251,
+    price: 337.2200,
+    quantity: 7399,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005003",
+    name: "HL Mountain Frame - Black, 42",
+    description: "Each frame is hand-crafted in our Bothell facility to the optimum diameter and wall-thickness required of a premium mountain frame. The heat-treated welded aluminum frame has a larger diameter tube that absorbs the bumps.",
+    category: "Components",
+    subCategory: "Mountain Frames",
+    sku: "FR-M94B-42",
+    tags: [
+      "Components",
+      "Mountain Frames",
+      "Black",
+      "42"
+    ],
+    cost: 739.0410,
+    price: 1349.6000,
+    quantity: 0,
+    clearance: true
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005004",
+    name: "Mountain-400-W Silver, 38",
+    description: "This bike delivers a high-level of performance on a budget. It is responsive and maneuverable, and offers peace-of-mind when you decide to go off-road.",
+    category: "Bikes",
+    subCategory: "Mountain Bikes",
+    sku: "BK-M38S-38",
+    tags: [
+      "Bikes",
+      "Mountain Bikes",
+      "Silver",
+      "38"
+    ],
+    cost: 419.7784,
+    price: 769.4900,
+    quantity: 150,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005005",
+    name: "Road-550-W Yellow, 42",
+    description: "Same technology as all of our Road series bikes, but the frame is sized for a woman.  Perfect all-around bike for road or racing.",
+    category: "Bikes",
+    subCategory: "Road Bikes",
+    sku: "BK-R64Y-42",
+    tags: [
+      "Bikes",
+      "Road Bikes",
+      "Yellow",
+      "42"
+    ],
+    cost: 713.0798,
+    price: 1120.4900,
+    quantity: 149,
+    clearance: true
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005006",
+    name: "ML Road Frame-W - Yellow, 40",
+    description: "Made from the same aluminum alloy as our top-of-the line HL frame, the ML features a lightweight down-tube milled to the perfect diameter for optimal strength. Women's version.",
+    category: "Components",
+    subCategory: "Road Frames",
+    sku: "FR-R72Y-40",
+    tags: [
+      "Components",
+      "Road Frames",
+      "Yellow",
+      "40"
+    ],
+    cost: 360.9428,
+    price: 594.8300,
+    quantity: 2280,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005007",
+    name: "LL Touring Frame - Blue, 54",
+    description: "Lightweight butted aluminum frame provides a more upright riding position for a trip around town.  Our ground-breaking design provides optimum comfort.",
+    category: "Components",
+    subCategory: "Touring Frames",
+    sku: "FR-T67U-54",
+    tags: [
+      "Components",
+      "Touring Frames",
+      "Blue",
+      "54"
+    ],
+    cost: 199.8519,
+    price: 333.4200,
+    quantity: 0,
+    clearance: true
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005008",
+    name: "Touring-3000 Blue, 58",
+    description: "All-occasion value bike with our basic comfort and safety features. Offers wider, more stable tires for a ride around town or weekend trip.",
+    category: "Bikes",
+    subCategory: "Touring Bikes",
+    sku: "BK-T18U-58",
+    tags: [
+      "Bikes",
+      "Touring Bikes",
+      "Blue",
+      "58"
+    ],
+    cost: 461.4448,
+    price: 742.3500,
+    quantity: 51,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005009",
+    name: "Men's Bib-Shorts, L",
+    description: "Designed for the AWC team with stay-put straps, moisture-control, chamois padding, and leg grippers.",
+    category: "Clothing",
+    subCategory: "Bib-Shorts",
+    sku: "SB-M891-L",
+    tags: [
+      "Clothing",
+      "Bib-Shorts",
+      "Multi",
+      "L"
+    ],
+    cost: 37.1209,
+    price: 89.9900,
+    quantity: 5023,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005010",
+    name: "HL Headset",
+    description: "High-quality 1\" threadless headset with a grease port for quick lubrication.",
+    category: "Components",
+    subCategory: "Headsets",
+    sku: "HS-3479",
+    tags: [
+      "Components",
+      "Headsets"
+    ],
+    cost: 55.3801,
+    price: 124.7300,
+    quantity: 69,
+    clearance: true
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005011",
+    name: "HL Touring Frame - Yellow, 50",
+    description: "The HL aluminum frame is custom-shaped for both good looks and strength; it will withstand the most rigorous challenges of daily riding. Men's version.",
+    category: "Components",
+    subCategory: "Touring Frames",
+    sku: "FR-T98Y-50",
+    tags: [
+      "Components",
+      "Touring Frames",
+      "Yellow",
+      "50"
+    ],
+    cost: 601.7437,
+    price: 1003.9100,
+    quantity: 7953,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005012",
+    name: "Road-450 Red, 52",
+    description: "A true multi-sport bike that offers streamlined riding and a revolutionary design. Aerodynamic design lets you ride with the pros, and the gearing will conquer hilly roads.",
+    category: "Bikes",
+    subCategory: "Road Bikes",
+    sku: "BK-R68R-52",
+    tags: [
+      "Bikes",
+      "Road Bikes",
+      "Red",
+      "52"
+    ],
+    cost: 884.7083,
+    price: 1457.9900,
+    quantity: 1306,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005013",
+    name: "Road-250 Black, 58",
+    description: "Alluminum-alloy frame provides a light, stiff ride, whether you are racing in the velodrome or on a demanding club ride on country roads.",
+    category: "Bikes",
+    subCategory: "Road Bikes",
+    sku: "BK-R89B-58",
+    tags: [
+      "Bikes",
+      "Road Bikes",
+      "Black",
+      "58"
+    ],
+    cost: 1554.9479,
+    price: 2443.3500,
+    quantity: 5334,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005014",
+    name: "HL Road Frame - Black, 48",
+    description: "Our lightest and best quality aluminum frame made from the newest alloy; it is welded and heat-treated for strength. Our innovative design results in maximum comfort and performance.",
+    category: "Components",
+    subCategory: "Road Frames",
+    sku: "FR-R92B-48",
+    tags: [
+      "Components",
+      "Road Frames",
+      "Black",
+      "48"
+    ],
+    cost: 868.6342,
+    price: 1431.5000,
+    quantity: 3578,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005015",
+    name: "Front Derailleur",
+    description: "Wide-link design.",
+    category: "Components",
+    subCategory: "Derailleurs",
+    sku: "FD-2342",
+    tags: [
+      "Components",
+      "Derailleurs",
+      "Silver"
+    ],
+    cost: 40.6216,
+    price: 91.4900,
+    quantity: 3934,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005016",
+    name: "Touring-3000 Yellow, 58",
+    description: "All-occasion value bike with our basic comfort and safety features. Offers wider, more stable tires for a ride around town or weekend trip.",
+    category: "Bikes",
+    subCategory: "Touring Bikes",
+    sku: "BK-T18Y-58",
+    tags: [
+      "Bikes",
+      "Touring Bikes",
+      "Yellow",
+      "58"
+    ],
+    cost: 461.4448,
+    price: 742.3500,
+    quantity: 4158,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005017",
+    name: "HL Mountain Frame - Silver, 48",
+    description: "Each frame is hand-crafted in our Bothell facility to the optimum diameter and wall-thickness required of a premium mountain frame. The heat-treated welded aluminum frame has a larger diameter tube that absorbs the bumps.",
+    category: "Components",
+    subCategory: "Mountain Frames",
+    sku: "FR-M94S-52",
+    tags: [
+      "Components",
+      "Mountain Frames",
+      "Silver",
+      "48"
+    ],
+    cost: 706.8110,
+    price: 1364.5000,
+    quantity: 5188,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005018",
+    name: "Men's Bib-Shorts, S",
+    description: "Designed for the AWC team with stay-put straps, moisture-control, chamois padding, and leg grippers.",
+    category: "Clothing",
+    subCategory: "Bib-Shorts",
+    sku: "SB-M891-S",
+    tags: [
+      "Clothing",
+      "Bib-Shorts",
+      "Multi",
+      "S"
+    ],
+    cost: 37.1209,
+    price: 89.9900,
+    quantity: 1982,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005019",
+    name: "LL Mountain Seat/Saddle",
+    description: "Synthetic leather. Features gel for increased comfort.",
+    category: "Components",
+    subCategory: "Saddles",
+    sku: "SE-M236",
+    tags: [
+      "Components",
+      "Saddles"
+    ],
+    cost: 12.0413,
+    price: 27.1200,
+    quantity: 25,
+    clearance: true
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005020",
+    name: "ML Fork",
+    description: "Composite road fork with an aluminum steerer tube.",
+    category: "Components",
+    subCategory: "Forks",
+    sku: "FK-5136",
+    tags: [
+      "Components",
+      "Forks"
+    ],
+    cost: 77.9176,
+    price: 175.4900,
+    quantity: 0,
+    clearance: true
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005021",
+    name: "LL Road Tire",
+    description: "Same great treads as more expensive tire with a less expensive wire bead casing.",
+    category: "Accessories",
+    subCategory: "Tires and Tubes",
+    sku: "TI-R092",
+    tags: [
+      "Accessories",
+      "Tires and Tubes"
+    ],
+    cost: 8.0373,
+    price: 21.4900,
+    quantity: 7612,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005022",
+    name: "Touring-1000 Blue, 54",
+    description: "Travel in style and comfort. Designed for maximum comfort and safety. Wide gear range takes on all hills. High-tech aluminum alloy construction provides durability without added weight.",
+    category: "Bikes",
+    subCategory: "Touring Bikes",
+    sku: "BK-T79U-54",
+    tags: [
+      "Bikes",
+      "Touring Bikes",
+      "Blue",
+      "54"
+    ],
+    cost: 1481.9379,
+    price: 2384.0700,
+    quantity: 5283,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005023",
+    name: "LL Mountain Frame - Silver, 48",
+    description: "Our best value utilizing the same, ground-breaking frame technology as the ML aluminum frame.",
+    category: "Components",
+    subCategory: "Mountain Frames",
+    sku: "FR-M21S-48",
+    tags: [
+      "Components",
+      "Mountain Frames",
+      "Silver",
+      "48"
+    ],
+    cost: 144.5938,
+    price: 264.0500,
+    quantity: 6079,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005024",
+    name: "Hydration Pack - 70 oz.",
+    description: "Versatile 70 oz hydration pack offers extra storage, easy-fill access, and a waist belt.",
+    category: "Accessories",
+    subCategory: "Hydration Packs",
+    sku: "HY-1023-70",
+    tags: [
+      "Accessories",
+      "Hydration Packs",
+      "Silver",
+      "70"
+    ],
+    cost: 20.5663,
+    price: 54.9900,
+    quantity: 7090,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005025",
+    name: "HL Mountain Frame - Silver, 48",
+    description: "Each frame is hand-crafted in our Bothell facility to the optimum diameter and wall-thickness required of a premium mountain frame. The heat-treated welded aluminum frame has a larger diameter tube that absorbs the bumps.",
+    category: "Components",
+    subCategory: "Mountain Frames",
+    sku: "FR-M94S-52",
+    tags: [
+      "Components",
+      "Mountain Frames",
+      "Silver",
+      "48"
+    ],
+    cost: 706.8110,
+    price: 1364.5000,
+    quantity: 9184,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005026",
+    name: "ML Road Front Wheel",
+    description: "Sturdy alloy features a quick-release hub.",
+    category: "Components",
+    subCategory: "Wheels",
+    sku: "FW-R762",
+    tags: [
+      "Components",
+      "Wheels",
+      "Black"
+    ],
+    cost: 110.2829,
+    price: 248.3850,
+    quantity: 3566,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005027",
+    name: "Mountain Tire Tube",
+    description: "Self-sealing tube.",
+    category: "Accessories",
+    subCategory: "Tires and Tubes",
+    sku: "TT-M928",
+    tags: [
+      "Accessories",
+      "Tires and Tubes"
+    ],
+    cost: 1.8663,
+    price: 4.9900,
+    quantity: 4615,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005028",
+    name: "Touring Tire Tube",
+    description: "General purpose tube.",
+    category: "Accessories",
+    subCategory: "Tires and Tubes",
+    sku: "TT-T092",
+    tags: [
+      "Accessories",
+      "Tires and Tubes"
+    ],
+    cost: 1.8663,
+    price: 4.9900,
+    quantity: 0,
+    clearance: true
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005029",
+    name: "Road-150 Red, 62",
+    description: "This bike is ridden by race winners. Developed with the Adventure Works Cycles professional race team, it has a extremely light heat-treated aluminum frame, and steering that allows precision control.",
+    category: "Bikes",
+    subCategory: "Road Bikes",
+    sku: "BK-R93R-62",
+    tags: [
+      "Bikes",
+      "Road Bikes",
+      "Red",
+      "62"
+    ],
+    cost: 2171.2942,
+    price: 3578.2700,
+    quantity: 6212,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005030",
+    name: "ML Road Seat/Saddle",
+    description: "Rubber bumpers absorb bumps.",
+    category: "Components",
+    subCategory: "Saddles",
+    sku: "SE-R908",
+    tags: [
+      "Components",
+      "Saddles"
+    ],
+    cost: 17.3782,
+    price: 39.1400,
+    quantity: 8788,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005031",
+    name: "HL Mountain Seat/Saddle",
+    description: "Anatomic design for a full-day of riding in comfort. Durable leather.",
+    category: "Components",
+    subCategory: "Saddles",
+    sku: "SE-M940",
+    tags: [
+      "Components",
+      "Saddles"
+    ],
+    cost: 23.3722,
+    price: 52.6400,
+    quantity: 4050,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005032",
+    name: "Racing Socks, L",
+    description: "Thin, lightweight and durable with cuffs that stay up.",
+    category: "Clothing",
+    subCategory: "Socks",
+    sku: "SO-R809-L",
+    tags: [
+      "Clothing",
+      "Socks",
+      "White",
+      "L"
+    ],
+    cost: 3.3623,
+    price: 8.9900,
+    quantity: 0,
+    clearance: true
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005033",
+    name: "LL Mountain Frame - Black, 48",
+    description: "Our best value utilizing the same, ground-breaking frame technology as the ML aluminum frame.",
+    category: "Components",
+    subCategory: "Mountain Frames",
+    sku: "FR-M21B-48",
+    tags: [
+      "Components",
+      "Mountain Frames",
+      "Black",
+      "48"
+    ],
+    cost: 136.7850,
+    price: 249.7900,
+    quantity: 0,
+    clearance: true
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005034",
+    name: "Water Bottle - 30 oz.",
+    description: "AWC logo water bottle - holds 30 oz; leak-proof.",
+    category: "Accessories",
+    subCategory: "Bottles and Cages",
+    sku: "WB-H098",
+    tags: [
+      "Accessories",
+      "Bottles and Cages"
+    ],
+    cost: 1.8663,
+    price: 4.9900,
+    quantity: 6726,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005035",
+    name: "HL Road Frame - Black, 62",
+    description: "Our lightest and best quality aluminum frame made from the newest alloy; it is welded and heat-treated for strength. Our innovative design results in maximum comfort and performance.",
+    category: "Components",
+    subCategory: "Road Frames",
+    sku: "FR-R92B-62",
+    tags: [
+      "Components",
+      "Road Frames",
+      "Black",
+      "62"
+    ],
+    cost: 868.6342,
+    price: 1431.5000,
+    quantity: 1357,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005036",
+    name: "ML Road Frame - Red, 60",
+    description: "Made from the same aluminum alloy as our top-of-the line HL frame, the ML features a lightweight down-tube milled to the perfect diameter for optimal strength. Men's version.",
+    category: "Components",
+    subCategory: "Road Frames",
+    sku: "FR-R72R-60",
+    tags: [
+      "Components",
+      "Road Frames",
+      "Red",
+      "60"
+    ],
+    cost: 352.1394,
+    price: 594.8300,
+    quantity: 772,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005037",
+    name: "Road-750 Black, 48",
+    description: "Entry level adult bike; offers a comfortable ride cross-country or down the block. Quick-release hubs and rims.",
+    category: "Bikes",
+    subCategory: "Road Bikes",
+    sku: "BK-R19B-48",
+    tags: [
+      "Bikes",
+      "Road Bikes",
+      "Black",
+      "48"
+    ],
+    cost: 343.6496,
+    price: 539.9900,
+    quantity: 2522,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005038",
+    name: "Road-650 Black, 58",
+    description: "Value-priced bike with many features of our top-of-the-line models. Has the same light, stiff frame, and the quick acceleration we're famous for.",
+    category: "Bikes",
+    subCategory: "Road Bikes",
+    sku: "BK-R50B-58",
+    tags: [
+      "Bikes",
+      "Road Bikes",
+      "Black",
+      "58"
+    ],
+    cost: 486.7066,
+    price: 782.9900,
+    quantity: 6397,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005039",
+    name: "Mountain-200 Black, 46",
+    description: "Serious back-country riding. Perfect for all levels of competition. Uses the same HL Frame as the Mountain-100.",
+    category: "Bikes",
+    subCategory: "Mountain Bikes",
+    sku: "BK-M68B-46",
+    tags: [
+      "Bikes",
+      "Mountain Bikes",
+      "Black",
+      "46"
+    ],
+    cost: 1251.9813,
+    price: 2294.9900,
+    quantity: 8370,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005040",
+    name: "ML Mountain Pedal",
+    description: "Lightweight, durable, clipless pedal with adjustable tension.",
+    category: "Components",
+    subCategory: "Pedals",
+    sku: "PD-M340",
+    tags: [
+      "Components",
+      "Pedals",
+      "Silver/Black"
+    ],
+    cost: 27.5680,
+    price: 62.0900,
+    quantity: 5886,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005041",
+    name: "Road-350-W Yellow, 42",
+    description: "Cross-train, race, or just socialize on a sleek, aerodynamic bike designed for a woman.  Advanced seat technology provides comfort all day.",
+    category: "Bikes",
+    subCategory: "Road Bikes",
+    sku: "BK-R79Y-42",
+    tags: [
+      "Bikes",
+      "Road Bikes",
+      "Yellow",
+      "42"
+    ],
+    cost: 1082.5100,
+    price: 1700.9900,
+    quantity: 1758,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005042",
+    name: "Long-Sleeve Logo Jersey, M",
+    description: "Unisex long-sleeve AWC logo microfiber cycling jersey",
+    category: "Clothing",
+    subCategory: "Jerseys",
+    sku: "LJ-0192-M",
+    tags: [
+      "Clothing",
+      "Jerseys",
+      "Multi",
+      "M"
+    ],
+    cost: 38.4923,
+    price: 49.9900,
+    quantity: 9343,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005043",
+    name: "Touring-3000 Yellow, 62",
+    description: "All-occasion value bike with our basic comfort and safety features. Offers wider, more stable tires for a ride around town or weekend trip.",
+    category: "Bikes",
+    subCategory: "Touring Bikes",
+    sku: "BK-T18Y-62",
+    tags: [
+      "Bikes",
+      "Touring Bikes",
+      "Yellow",
+      "62"
+    ],
+    cost: 461.4448,
+    price: 742.3500,
+    quantity: 2424,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005044",
+    name: "LL Road Front Wheel",
+    description: "Replacement road front wheel for entry-level cyclist.",
+    category: "Components",
+    subCategory: "Wheels",
+    sku: "FW-R623",
+    tags: [
+      "Components",
+      "Wheels",
+      "Black"
+    ],
+    cost: 37.9909,
+    price: 85.5650,
+    quantity: 101,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005045",
+    name: "Mountain-300 Black, 44",
+    description: "For true trail addicts.  An extremely durable bike that will go anywhere and keep you in control on challenging terrain - without breaking your budget.",
+    category: "Bikes",
+    subCategory: "Mountain Bikes",
+    sku: "BK-M47B-44",
+    tags: [
+      "Bikes",
+      "Mountain Bikes",
+      "Black",
+      "44"
+    ],
+    cost: 598.4354,
+    price: 1079.9900,
+    quantity: 118,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005046",
+    name: "LL Touring Frame - Yellow, 50",
+    description: "Lightweight butted aluminum frame provides a more upright riding position for a trip around town.  Our ground-breaking design provides optimum comfort.",
+    category: "Components",
+    subCategory: "Touring Frames",
+    sku: "FR-T67Y-50",
+    tags: [
+      "Components",
+      "Touring Frames",
+      "Yellow",
+      "50"
+    ],
+    cost: 199.8519,
+    price: 333.4200,
+    quantity: 2268,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005047",
+    name: "Road-750 Black, 48",
+    description: "Entry level adult bike; offers a comfortable ride cross-country or down the block. Quick-release hubs and rims.",
+    category: "Bikes",
+    subCategory: "Road Bikes",
+    sku: "BK-R19B-48",
+    tags: [
+      "Bikes",
+      "Road Bikes",
+      "Black",
+      "48"
+    ],
+    cost: 343.6496,
+    price: 539.9900,
+    quantity: 145,
+    clearance: true
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005048",
+    name: "Bike Wash - Dissolver",
+    description: "Washes off the toughest road grime; dissolves grease, environmentally safe. 1-liter bottle.",
+    category: "Accessories",
+    subCategory: "Cleaners",
+    sku: "CL-9009",
+    tags: [
+      "Accessories",
+      "Cleaners"
+    ],
+    cost: 2.9733,
+    price: 7.9500,
+    quantity: 9779,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005049",
+    name: "HL Mountain Tire",
+    description: "Incredible traction, lightweight carbon reinforced.",
+    category: "Accessories",
+    subCategory: "Tires and Tubes",
+    sku: "TI-M823",
+    tags: [
+      "Accessories",
+      "Tires and Tubes"
+    ],
+    cost: 13.0900,
+    price: 35.0000,
+    quantity: 50,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005050",
+    name: "Touring-1000 Yellow, 60",
+    description: "Travel in style and comfort. Designed for maximum comfort and safety. Wide gear range takes on all hills. High-tech aluminum alloy construction provides durability without added weight.",
+    category: "Bikes",
+    subCategory: "Touring Bikes",
+    sku: "BK-T79Y-60",
+    tags: [
+      "Bikes",
+      "Touring Bikes",
+      "Yellow",
+      "60"
+    ],
+    cost: 1481.9379,
+    price: 2384.0700,
+    quantity: 97,
+    clearance: true
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005051",
+    name: "LL Road Rear Wheel",
+    description: "Replacement road rear wheel for entry-level cyclist.",
+    category: "Components",
+    subCategory: "Wheels",
+    sku: "RW-R623",
+    tags: [
+      "Components",
+      "Wheels",
+      "Black"
+    ],
+    cost: 49.9789,
+    price: 112.5650,
+    quantity: 164,
+    clearance: true
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005052",
+    name: "HL Mountain Seat/Saddle",
+    description: "Anatomic design for a full-day of riding in comfort. Durable leather.",
+    category: "Components",
+    subCategory: "Saddles",
+    sku: "SE-M940",
+    tags: [
+      "Components",
+      "Saddles"
+    ],
+    cost: 23.3722,
+    price: 52.6400,
+    quantity: 150,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005053",
+    name: "Sport-100 Helmet, Red",
+    description: "Universal fit, well-vented, lightweight , snap-on visor.",
+    category: "Accessories",
+    subCategory: "Helmets",
+    sku: "HL-U509-R",
+    tags: [
+      "Accessories",
+      "Helmets",
+      "Red"
+    ],
+    cost: 13.0863,
+    price: 34.9900,
+    quantity: 7464,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005054",
+    name: "LL Road Front Wheel",
+    description: "Replacement road front wheel for entry-level cyclist.",
+    category: "Components",
+    subCategory: "Wheels",
+    sku: "FW-R623",
+    tags: [
+      "Components",
+      "Wheels",
+      "Black"
+    ],
+    cost: 37.9909,
+    price: 85.5650,
+    quantity: 185,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005055",
+    name: "Mountain-500 Black, 44",
+    description: "Suitable for any type of riding, on or off-road. Fits any budget. Smooth-shifting with a comfortable ride.",
+    category: "Bikes",
+    subCategory: "Mountain Bikes",
+    sku: "BK-M18B-44",
+    tags: [
+      "Bikes",
+      "Mountain Bikes",
+      "Black",
+      "44"
+    ],
+    cost: 294.5797,
+    price: 539.9900,
+    quantity: 6864,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005056",
+    name: "HL Road Front Wheel",
+    description: "Strong wheel with double-walled rim.",
+    category: "Components",
+    subCategory: "Wheels",
+    sku: "FW-R820",
+    tags: [
+      "Components",
+      "Wheels",
+      "Black"
+    ],
+    cost: 146.5466,
+    price: 330.0600,
+    quantity: 61,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005057",
+    name: "Road-750 Black, 48",
+    description: "Entry level adult bike; offers a comfortable ride cross-country or down the block. Quick-release hubs and rims.",
+    category: "Bikes",
+    subCategory: "Road Bikes",
+    sku: "BK-R19B-48",
+    tags: [
+      "Bikes",
+      "Road Bikes",
+      "Black",
+      "48"
+    ],
+    cost: 343.6496,
+    price: 539.9900,
+    quantity: 8267,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005058",
+    name: "LL Road Frame - Black, 62",
+    description: "The LL Frame provides a safe comfortable ride, while offering superior bump absorption in a value-priced aluminum frame.",
+    category: "Components",
+    subCategory: "Road Frames",
+    sku: "FR-R38B-62",
+    tags: [
+      "Components",
+      "Road Frames",
+      "Black",
+      "62"
+    ],
+    cost: 204.6251,
+    price: 337.2200,
+    quantity: 4077,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005059",
+    name: "Fender Set - Mountain",
+    description: "Clip-on fenders fit most mountain bikes.",
+    category: "Accessories",
+    subCategory: "Fenders",
+    sku: "FE-6654",
+    tags: [
+      "Accessories",
+      "Fenders"
+    ],
+    cost: 8.2205,
+    price: 21.9800,
+    quantity: 8703,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005060",
+    name: "Touring Tire Tube",
+    description: "General purpose tube.",
+    category: "Accessories",
+    subCategory: "Tires and Tubes",
+    sku: "TT-T092",
+    tags: [
+      "Accessories",
+      "Tires and Tubes"
+    ],
+    cost: 1.8663,
+    price: 4.9900,
+    quantity: 6852,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005061",
+    name: "Mountain-400-W Silver, 46",
+    description: "This bike delivers a high-level of performance on a budget. It is responsive and maneuverable, and offers peace-of-mind when you decide to go off-road.",
+    category: "Bikes",
+    subCategory: "Mountain Bikes",
+    sku: "BK-M38S-46",
+    tags: [
+      "Bikes",
+      "Mountain Bikes",
+      "Silver",
+      "46"
+    ],
+    cost: 419.7784,
+    price: 769.4900,
+    quantity: 108,
+    clearance: true
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005062",
+    name: "HL Mountain Frame - Black, 44",
+    description: "Each frame is hand-crafted in our Bothell facility to the optimum diameter and wall-thickness required of a premium mountain frame. The heat-treated welded aluminum frame has a larger diameter tube that absorbs the bumps.",
+    category: "Components",
+    subCategory: "Mountain Frames",
+    sku: "FR-M94B-44",
+    tags: [
+      "Components",
+      "Mountain Frames",
+      "Black",
+      "44"
+    ],
+    cost: 699.0928,
+    price: 1349.6000,
+    quantity: 29,
+    clearance: true
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005063",
+    name: "Touring-3000 Blue, 44",
+    description: "All-occasion value bike with our basic comfort and safety features. Offers wider, more stable tires for a ride around town or weekend trip.",
+    category: "Bikes",
+    subCategory: "Touring Bikes",
+    sku: "BK-T18U-44",
+    tags: [
+      "Bikes",
+      "Touring Bikes",
+      "Blue",
+      "44"
+    ],
+    cost: 461.4448,
+    price: 742.3500,
+    quantity: 5568,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005064",
+    name: "Touring-3000 Blue, 62",
+    description: "All-occasion value bike with our basic comfort and safety features. Offers wider, more stable tires for a ride around town or weekend trip.",
+    category: "Bikes",
+    subCategory: "Touring Bikes",
+    sku: "BK-T18U-62",
+    tags: [
+      "Bikes",
+      "Touring Bikes",
+      "Blue",
+      "62"
+    ],
+    cost: 461.4448,
+    price: 742.3500,
+    quantity: 9656,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005065",
+    name: "Mountain-400-W Silver, 40",
+    description: "This bike delivers a high-level of performance on a budget. It is responsive and maneuverable, and offers peace-of-mind when you decide to go off-road.",
+    category: "Bikes",
+    subCategory: "Mountain Bikes",
+    sku: "BK-M38S-40",
+    tags: [
+      "Bikes",
+      "Mountain Bikes",
+      "Silver",
+      "40"
+    ],
+    cost: 419.7784,
+    price: 769.4900,
+    quantity: 182,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005066",
+    name: "HL Touring Frame - Blue, 54",
+    description: "The HL aluminum frame is custom-shaped for both good looks and strength; it will withstand the most rigorous challenges of daily riding. Men's version.",
+    category: "Components",
+    subCategory: "Touring Frames",
+    sku: "FR-T98U-54",
+    tags: [
+      "Components",
+      "Touring Frames",
+      "Blue",
+      "54"
+    ],
+    cost: 601.7437,
+    price: 1003.9100,
+    quantity: 191,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005067",
+    name: "Road-650 Red, 52",
+    description: "Value-priced bike with many features of our top-of-the-line models. Has the same light, stiff frame, and the quick acceleration we're famous for.",
+    category: "Bikes",
+    subCategory: "Road Bikes",
+    sku: "BK-R50R-52",
+    tags: [
+      "Bikes",
+      "Road Bikes",
+      "Red",
+      "52"
+    ],
+    cost: 486.7066,
+    price: 782.9900,
+    quantity: 0,
+    clearance: true
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005068",
+    name: "HL Mountain Frame - Black, 42",
+    description: "Each frame is hand-crafted in our Bothell facility to the optimum diameter and wall-thickness required of a premium mountain frame. The heat-treated welded aluminum frame has a larger diameter tube that absorbs the bumps.",
+    category: "Components",
+    subCategory: "Mountain Frames",
+    sku: "FR-M94B-42",
+    tags: [
+      "Components",
+      "Mountain Frames",
+      "Black",
+      "42"
+    ],
+    cost: 739.0410,
+    price: 1349.6000,
+    quantity: 35,
+    clearance: true
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005069",
+    name: "Road-450 Red, 60",
+    description: "A true multi-sport bike that offers streamlined riding and a revolutionary design. Aerodynamic design lets you ride with the pros, and the gearing will conquer hilly roads.",
+    category: "Bikes",
+    subCategory: "Road Bikes",
+    sku: "BK-R68R-60",
+    tags: [
+      "Bikes",
+      "Road Bikes",
+      "Red",
+      "60"
+    ],
+    cost: 884.7083,
+    price: 1457.9900,
+    quantity: 4389,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005070",
+    name: "Mountain-200 Silver, 46",
+    description: "Serious back-country riding. Perfect for all levels of competition. Uses the same HL Frame as the Mountain-100.",
+    category: "Bikes",
+    subCategory: "Mountain Bikes",
+    sku: "BK-M68S-46",
+    tags: [
+      "Bikes",
+      "Mountain Bikes",
+      "Silver",
+      "46"
+    ],
+    cost: 1265.6195,
+    price: 2319.9900,
+    quantity: 4749,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005071",
+    name: "HL Fork",
+    description: "High-performance carbon road fork with curved legs.",
+    category: "Components",
+    subCategory: "Forks",
+    sku: "FK-9939",
+    tags: [
+      "Components",
+      "Forks"
+    ],
+    cost: 101.8936,
+    price: 229.4900,
+    quantity: 149,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005072",
+    name: "AWC Logo Cap",
+    description: "Traditional style with a flip-up brim; one-size fits all.",
+    category: "Clothing",
+    subCategory: "Caps",
+    sku: "CA-1098",
+    tags: [
+      "Clothing",
+      "Caps",
+      "Multi"
+    ],
+    cost: 6.9223,
+    price: 8.9900,
+    quantity: 6356,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005073",
+    name: "Hydration Pack - 70 oz.",
+    description: "Versatile 70 oz hydration pack offers extra storage, easy-fill access, and a waist belt.",
+    category: "Accessories",
+    subCategory: "Hydration Packs",
+    sku: "HY-1023-70",
+    tags: [
+      "Accessories",
+      "Hydration Packs",
+      "Silver",
+      "70"
+    ],
+    cost: 20.5663,
+    price: 54.9900,
+    quantity: 437,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005074",
+    name: "LL Road Pedal",
+    description: "Clipless pedals - aluminum.",
+    category: "Components",
+    subCategory: "Pedals",
+    sku: "PD-R347",
+    tags: [
+      "Components",
+      "Pedals",
+      "Silver/Black"
+    ],
+    cost: 17.9776,
+    price: 40.4900,
+    quantity: 7675,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005075",
+    name: "LL Road Front Wheel",
+    description: "Replacement road front wheel for entry-level cyclist.",
+    category: "Components",
+    subCategory: "Wheels",
+    sku: "FW-R623",
+    tags: [
+      "Components",
+      "Wheels",
+      "Black"
+    ],
+    cost: 37.9909,
+    price: 85.5650,
+    quantity: 128,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005076",
+    name: "Headlights - Dual-Beam",
+    description: "Rechargeable dual-beam headlight.",
+    category: "Accessories",
+    subCategory: "Lights",
+    sku: "LT-H902",
+    tags: [
+      "Accessories",
+      "Lights"
+    ],
+    cost: 14.4334,
+    price: 34.9900,
+    quantity: 7490,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005077",
+    name: "Touring-1000 Blue, 60",
+    description: "Travel in style and comfort. Designed for maximum comfort and safety. Wide gear range takes on all hills. High-tech aluminum alloy construction provides durability without added weight.",
+    category: "Bikes",
+    subCategory: "Touring Bikes",
+    sku: "BK-T79U-60",
+    tags: [
+      "Bikes",
+      "Touring Bikes",
+      "Blue",
+      "60"
+    ],
+    cost: 1481.9379,
+    price: 2384.0700,
+    quantity: 50,
+    clearance: true
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005078",
+    name: "All-Purpose Bike Stand",
+    description: "Perfect all-purpose bike stand for working on your bike at home. Quick-adjusting clamps and steel construction.",
+    category: "Accessories",
+    subCategory: "Bike Stands",
+    sku: "ST-1401",
+    tags: [
+      "Accessories",
+      "Bike Stands"
+    ],
+    cost: 59.4660,
+    price: 159.0000,
+    quantity: 4114,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005079",
+    name: "ML Mountain Frame-W - Silver, 40",
+    description: "The ML frame is a heat-treated aluminum frame made with the same detail and quality as our HL frame. It offers superior performance. Men's version.",
+    category: "Components",
+    subCategory: "Mountain Frames",
+    sku: "FR-M63S-40",
+    tags: [
+      "Components",
+      "Mountain Frames",
+      "Silver",
+      "40"
+    ],
+    cost: 199.3757,
+    price: 364.0900,
+    quantity: 6157,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005080",
+    name: "Women's Tights, M",
+    description: "Warm spandex tights for winter riding; seamless chamois construction eliminates pressure points.",
+    category: "Clothing",
+    subCategory: "Tights",
+    sku: "TG-W091-M",
+    tags: [
+      "Clothing",
+      "Tights",
+      "Black",
+      "M"
+    ],
+    cost: 30.9334,
+    price: 74.9900,
+    quantity: 4800,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005081",
+    name: "Sport-100 Helmet, Blue",
+    description: "Universal fit, well-vented, lightweight , snap-on visor.",
+    category: "Accessories",
+    subCategory: "Helmets",
+    sku: "HL-U509-B",
+    tags: [
+      "Accessories",
+      "Helmets",
+      "Blue"
+    ],
+    cost: 13.0863,
+    price: 34.9900,
+    quantity: 304,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005082",
+    name: "ML Mountain Frame - Black, 48",
+    description: "The ML frame is a heat-treated aluminum frame made with the same detail and quality as our HL frame. It offers superior performance. Women's version.",
+    category: "Components",
+    subCategory: "Mountain Frames",
+    sku: "FR-M63B-48",
+    tags: [
+      "Components",
+      "Mountain Frames",
+      "Black",
+      "48"
+    ],
+    cost: 185.8193,
+    price: 348.7600,
+    quantity: 3997,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005083",
+    name: "HL Touring Frame - Yellow, 60",
+    description: "The HL aluminum frame is custom-shaped for both good looks and strength; it will withstand the most rigorous challenges of daily riding. Men's version.",
+    category: "Components",
+    subCategory: "Touring Frames",
+    sku: "FR-T98Y-60",
+    tags: [
+      "Components",
+      "Touring Frames",
+      "Yellow",
+      "60"
+    ],
+    cost: 601.7437,
+    price: 1003.9100,
+    quantity: 1145,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005084",
+    name: "LL Touring Seat/Saddle",
+    description: "Comfortable, ergonomically shaped gel saddle.",
+    category: "Components",
+    subCategory: "Saddles",
+    sku: "SE-T312",
+    tags: [
+      "Components",
+      "Saddles"
+    ],
+    cost: 12.0413,
+    price: 27.1200,
+    quantity: 7379,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005085",
+    name: "Women's Tights, L",
+    description: "Warm spandex tights for winter riding; seamless chamois construction eliminates pressure points.",
+    category: "Clothing",
+    subCategory: "Tights",
+    sku: "TG-W091-L",
+    tags: [
+      "Clothing",
+      "Tights",
+      "Black",
+      "L"
+    ],
+    cost: 30.9334,
+    price: 74.9900,
+    quantity: 3693,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005086",
+    name: "Touring Tire",
+    description: "High-density rubber.",
+    category: "Accessories",
+    subCategory: "Tires and Tubes",
+    sku: "TI-T723",
+    tags: [
+      "Accessories",
+      "Tires and Tubes"
+    ],
+    cost: 10.8423,
+    price: 28.9900,
+    quantity: 160,
+    clearance: true
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005087",
+    name: "ML Road Pedal",
+    description: "Lightweight aluminum alloy construction.",
+    category: "Components",
+    subCategory: "Pedals",
+    sku: "PD-R563",
+    tags: [
+      "Components",
+      "Pedals",
+      "Silver/Black"
+    ],
+    cost: 27.5680,
+    price: 62.0900,
+    quantity: 6789,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005088",
+    name: "Road-650 Black, 58",
+    description: "Value-priced bike with many features of our top-of-the-line models. Has the same light, stiff frame, and the quick acceleration we're famous for.",
+    category: "Bikes",
+    subCategory: "Road Bikes",
+    sku: "BK-R50B-58",
+    tags: [
+      "Bikes",
+      "Road Bikes",
+      "Black",
+      "58"
+    ],
+    cost: 486.7066,
+    price: 782.9900,
+    quantity: 120,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005089",
+    name: "HL Touring Frame - Blue, 46",
+    description: "The HL aluminum frame is custom-shaped for both good looks and strength; it will withstand the most rigorous challenges of daily riding. Men's version.",
+    category: "Components",
+    subCategory: "Touring Frames",
+    sku: "FR-T98U-46",
+    tags: [
+      "Components",
+      "Touring Frames",
+      "Blue",
+      "46"
+    ],
+    cost: 601.7437,
+    price: 1003.9100,
+    quantity: 2060,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005090",
+    name: "HL Headset",
+    description: "High-quality 1\" threadless headset with a grease port for quick lubrication.",
+    category: "Components",
+    subCategory: "Headsets",
+    sku: "HS-3479",
+    tags: [
+      "Components",
+      "Headsets"
+    ],
+    cost: 55.3801,
+    price: 124.7300,
+    quantity: 6788,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005091",
+    name: "Touring-2000 Blue, 54",
+    description: "The plush custom saddle keeps you riding all day,  and there's plenty of space to add panniers and bike bags to the newly-redesigned carrier.  This bike has stability when fully-loaded.",
+    category: "Bikes",
+    subCategory: "Touring Bikes",
+    sku: "BK-T44U-54",
+    tags: [
+      "Bikes",
+      "Touring Bikes",
+      "Blue",
+      "54"
+    ],
+    cost: 755.1508,
+    price: 1214.8500,
+    quantity: 9980,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005092",
+    name: "Rear Derailleur",
+    description: "Wide-link design.",
+    category: "Components",
+    subCategory: "Derailleurs",
+    sku: "RD-2308",
+    tags: [
+      "Components",
+      "Derailleurs",
+      "Silver"
+    ],
+    cost: 53.9282,
+    price: 121.4600,
+    quantity: 725,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005093",
+    name: "Minipump",
+    description: "Designed for convenience. Fits in your pocket. Aluminum barrel. 160psi rated.",
+    category: "Accessories",
+    subCategory: "Pumps",
+    sku: "PU-0452",
+    tags: [
+      "Accessories",
+      "Pumps"
+    ],
+    cost: 8.2459,
+    price: 19.9900,
+    quantity: 166,
+    clearance: true
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005094",
+    name: "HL Mountain Frame - Black, 46",
+    description: "Each frame is hand-crafted in our Bothell facility to the optimum diameter and wall-thickness required of a premium mountain frame. The heat-treated welded aluminum frame has a larger diameter tube that absorbs the bumps.",
+    category: "Components",
+    subCategory: "Mountain Frames",
+    sku: "FR-M94B-46",
+    tags: [
+      "Components",
+      "Mountain Frames",
+      "Black",
+      "46"
+    ],
+    cost: 739.0410,
+    price: 1349.6000,
+    quantity: 1329,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005095",
+    name: "Mountain-200 Black, 42",
+    description: "Serious back-country riding. Perfect for all levels of competition. Uses the same HL Frame as the Mountain-100.",
+    category: "Bikes",
+    subCategory: "Mountain Bikes",
+    sku: "BK-M68B-42",
+    tags: [
+      "Bikes",
+      "Mountain Bikes",
+      "Black",
+      "42"
+    ],
+    cost: 1251.9813,
+    price: 2294.9900,
+    quantity: 9210,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005096",
+    name: "Road-650 Red, 58",
+    description: "Value-priced bike with many features of our top-of-the-line models. Has the same light, stiff frame, and the quick acceleration we're famous for.",
+    category: "Bikes",
+    subCategory: "Road Bikes",
+    sku: "BK-R50R-58",
+    tags: [
+      "Bikes",
+      "Road Bikes",
+      "Red",
+      "58"
+    ],
+    cost: 486.7066,
+    price: 782.9900,
+    quantity: 9414,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005097",
+    name: "ML Road Frame - Red, 44",
+    description: "Made from the same aluminum alloy as our top-of-the line HL frame, the ML features a lightweight down-tube milled to the perfect diameter for optimal strength. Men's version.",
+    category: "Components",
+    subCategory: "Road Frames",
+    sku: "FR-R72R-44",
+    tags: [
+      "Components",
+      "Road Frames",
+      "Red",
+      "44"
+    ],
+    cost: 352.1394,
+    price: 594.8300,
+    quantity: 2906,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005098",
+    name: "ML Road Front Wheel",
+    description: "Sturdy alloy features a quick-release hub.",
+    category: "Components",
+    subCategory: "Wheels",
+    sku: "FW-R762",
+    tags: [
+      "Components",
+      "Wheels",
+      "Black"
+    ],
+    cost: 110.2829,
+    price: 248.3850,
+    quantity: 0,
+    clearance: true
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005099",
+    name: "Mountain-400-W Silver, 40",
+    description: "This bike delivers a high-level of performance on a budget. It is responsive and maneuverable, and offers peace-of-mind when you decide to go off-road.",
+    category: "Bikes",
+    subCategory: "Mountain Bikes",
+    sku: "BK-M38S-40",
+    tags: [
+      "Bikes",
+      "Mountain Bikes",
+      "Silver",
+      "40"
+    ],
+    cost: 419.7784,
+    price: 769.4900,
+    quantity: 8873,
+    clearance: false
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000005100",
+    name: "LL Mountain Frame - Silver, 52",
+    description: "Our best value utilizing the same, ground-breaking frame technology as the ML aluminum frame.",
+    category: "Components",
+    subCategory: "Mountain Frames",
+    sku: "FR-M21S-52",
+    tags: [
+      "Components",
+      "Mountain Frames",
+      "Silver",
+      "52"
+    ],
+    cost: 144.5938,
+    price: 264.0500,
+    quantity: 2762,
+    clearance: false
+  }
+])

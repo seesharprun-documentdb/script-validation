@@ -1,0 +1,43 @@
+db.stores.insertMany([
+  {
+    _id: "00000000-0000-0000-0000-000000003001",
+    name: "Proseware, Inc. | Home Entertainment Hub - East Linwoodbury",
+    promotionEvents: [
+      {
+          eventName: "Unbeatable Bargain Bash"
+      },
+      {
+          eventName: "Steal of a Deal Days"
+      }
+    ]
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000003002",
+    name: "Fabrikam, Inc. | Home Accessory Outlet - West Adele",
+    promotionEvents: [
+      {
+          eventName: "Incredible Discount Days"
+      },
+      {
+          eventName: "Steal of a Deal Days"
+      }
+    ],
+    location: {
+        lat: -89.2384,
+        lon: -46.4012
+    },
+  },
+  {
+    _id: "00000000-0000-0000-0000-000000003003",
+    name: "Wide World Importers | Fitness Equipment Outlet - Reillyborough",
+    promotionEvents: [
+      {
+          eventName: "Incredible Discount Days"
+      }
+    ],
+    location: {
+        lat: -2.4111,
+        lon: 72.1041
+    },
+  }
+])

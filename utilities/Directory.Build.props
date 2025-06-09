@@ -1,0 +1,16 @@
+<Project>
+  <PropertyGroup>
+    <EnableMSTestRunner>true</EnableMSTestRunner>
+    <TestingPlatformDotnetTestSupport>true</TestingPlatformDotnetTestSupport>
+    <EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>
+    <NoWarn>CA1050;</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="../samples/**/*.mongo">
+      <LogicalName>validate.sample.$([System.String]::Copy('%(RecursiveDir)%(Filename)%(Extension)').Replace('/','.').Replace('\','.'))</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="../reference/**/*.yml">
+      <LogicalName>validate.reference.$([System.String]::Copy('%(RecursiveDir)%(Filename)%(Extension)').Replace('/','.').Replace('\','.'))</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

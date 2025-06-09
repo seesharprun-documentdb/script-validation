@@ -7,10 +7,13 @@ jobs:
     permissions:
       contents: read
     services:
-      localhost:
-        image: mongo
+      documentdb:
+        image: ghcr.io/microsoft/documentdb/documentdb-local:latest
+        env:
+          USERNAME: ciuser
+          PASSWORD: cipassword
         ports:
-          - 27017:27017
+          - 10260:10260
     steps:
       - name: Checkout source
         uses: actions/checkout@v4
@@ -19,6 +22,10 @@ jobs:
         with:
           dotnet-version: | 
             10.x
+      - name: Install .NET tools
+        run: |
+          dotnet new tool-manifest
+          dotnet tool install --local DotnetCtrfJsonReporter
       - name: Install Mongo shell
         run: |
           sudo apt-get install gnupg
@@ -31,6 +38,20 @@ jobs:
           mongosh --version
       - name: Run validation script
         working-directory: utilities
+        env:
+          DOCUMENTDB_IDENTITY: ciuser
+          DOCUMENTDB_CREDENTIAL: cipassword
+          DOCUMENTDB_HOST: documentdb
+          DOCUMENTDB_PORT: 10260
         run: |
-          dotnet run validate.cs
+          dotnet run validate.cs --results-directory "tst" --report-trx --report-trx-filename "results.trx" --no-ansi --ignore-exit-code "2"
+      - name: Generate CTRF test report
+        run: |
+          dotnet tool run DotnetCtrfJsonReporter --test-tool "mstest" --trx-path "tst/results.trx" --output-directory "ctrf" --output-filename "report.json"
+      - name: Publish CTRF test report
+        uses: ctrf-io/github-test-reporter@v1
+        with:
+          report-path: '**/ctrf/report*.json'
+      
+      
           

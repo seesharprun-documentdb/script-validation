@@ -30,14 +30,9 @@ parameters:
       Flags to modify the behavior of the regex. Common options include, but are not limited to `i` for case-insensitive matching, `m` for multiline matching, etc.
 examples:
   sample:
-    type: stores
-    query: |
-      db.stores.find({
-        "storeName": {
-          $regex: /Supermart/i,
-          $options: 'i'
-        }
-      })
+    set: stores
+    filter: |
+      {}
   items:
     - title: Find documents with a specific substring
       explanation: |
@@ -45,18 +40,18 @@ examples:
       description: |
         In this example, the operator filters to documents that contain the exact phrase `Home` in its name.
       query: |
-        db.stores.find({ "name": { "$regex": /Home/ }})
+        db.stores.find({ "name": { "$regex": /Home/ }}, { name: 1 })
       output:
-        type: json
+        devlang: bson
         value: |
           [
             {
-              "_id": "aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb",
-              "name": "Proseware, Inc. | Home Entertainment Hub - East Linwoodbury"
+              _id: '00000000-0000-0000-0000-000000003001',
+              name: 'Proseware, Inc. | Home Entertainment Hub - East Linwoodbury'
             },
             {
-              "_id": "bbbbbbbb-1111-2222-3333-cccccccccccc",
-              "name": "Fabrikam, Inc. | Home Accessory Outlet - West Adele"
+              _id: '00000000-0000-0000-0000-000000003002',
+              name: 'Fabrikam, Inc. | Home Accessory Outlet - West Adele'
             }
           ]
     - title: Find documents using a case-insensitive match
@@ -65,18 +60,18 @@ examples:
       description: |
         In this example, the operator filters to documents that contain the case-insensitive phrase `outlet` in its name.
       query: |
-        db.stores.find({ "name": { $regex: /outlet/, $options: "i" }})
+        db.stores.find({ "name": { $regex: /outlet/, $options: "i" }}, { name: 1 })
       output:
-        type: json
+        devlang: bson
         value: |
           [
             {
-              "_id": "bbbbbbbb-1111-2222-3333-cccccccccccc",
-              "name": "Fabrikam, Inc. | Home Accessory Outlet - West Adele"
+              _id: '00000000-0000-0000-0000-000000003002',
+              name: 'Fabrikam, Inc. | Home Accessory Outlet - West Adele'
             },
             {
-              "_id": "cccccccc-2222-3333-4444-dddddddddddd",
-              "name": "Wide World Importers | Fitness Equipment Outlet - Reillyborough"
+              _id: '00000000-0000-0000-0000-000000003003',
+              name: 'Wide World Importers | Fitness Equipment Outlet - Reillyborough'
             }
           ]
 related:

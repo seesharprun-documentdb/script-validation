@@ -1,5 +1,5 @@
 ## YamlMime:NoSQLQueryReference
-type: none
+type: operator
 name: simple
 description: TODO
 summary: TODO
@@ -7,25 +7,33 @@ syntax: TODO
 parameters:
 examples:
   sample:
-    type: products
-    query: |
-      db.products.find({
-        "category": {
-          $regex: /gear-surf-surfboards/,
-          $options: 'i'
-        }
-      });
+    set: products
+    filter: |
+      { 
+        "subCategory": { 
+          "$in": ["Forks", "Bike Stands"] 
+        }  
+      }
   items:
-    - title: This is a very basic example
-      explanation: |
+    - title: Basic count example
+      description: |
         TODO
+      query: |
+        db.products.count({
+          subCategory: "Forks"
+        });
+      output:
+        devlang: bson
+        value: |
+          2
+    - title: Complex aggregate example
       description: |
         TODO
       query: |
         db.products.aggregate([
           {
             $match: {
-              category: "gear-surf-surfboards"
+              subCategory: "Bike Stands"
             }
           },
           {
@@ -33,10 +41,6 @@ examples:
           }
         ]);
       output:
-        type: json
+        devlang: bson
         value: |
-          [
-            {
-              totalProducts: 1
-            }
-          ]
+          [ { totalProducts: 1 } ]

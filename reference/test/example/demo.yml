@@ -1,0 +1,16 @@
+## YamlMime:NoSQLQueryReference
+type: command
+name: demo
+description: TODO
+summary: TODO
+syntax: TODO
+parameters:
+examples:
+  items:
+    - title: System admin example
+      description: |
+        TODO
+      query: |
+        db.runCommand({
+          ping: 1
+        });
