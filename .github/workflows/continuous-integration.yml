@@ -46,12 +46,13 @@ jobs:
         run: |
           dotnet run validate.cs --results-directory "tst" --report-trx --report-trx-filename "results.trx" --no-ansi --ignore-exit-code "2"
       - name: Generate CTRF test report
+        working-directory: utilities
         run: |
           dotnet tool run DotnetCtrfJsonReporter --test-tool "mstest" --trx-path "tst/results.trx" --output-directory "ctrf" --output-filename "report.json"
       - name: Publish CTRF test report
         uses: ctrf-io/github-test-reporter@v1
         with:
-          report-path: '**/ctrf/report*.json'
+          report-path: 'utilities/**/ctrf/report*.json'
       
       
           
