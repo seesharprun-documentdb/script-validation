@@ -85,6 +85,8 @@ sealed class GenerateCommand(
             new JsonText(
                 JsonSerializer.Serialize(output, StaticJsonSerializerContext.Default.CtrfReport)
             )
+                .BracesColor(Color.Gray)
+                .BracketColor(Color.Gray)
         )
             .Header("[yellow bold]Output [italic](CTRF)[/][/]")
             .Collapse()
@@ -102,6 +104,8 @@ sealed class GenerateCommand(
                     Runtime = elapsed.Humanize()
                 }, StaticJsonSerializerContext.Default.PerformanceProfile)
             )
+                .BracesColor(Color.Gray)
+                .BracketColor(Color.Gray)
         )
             .Header("[yellow bold]Profiler[/]")
             .Collapse()
