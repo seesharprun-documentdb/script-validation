@@ -7,7 +7,7 @@ jobs:
     permissions:
       contents: read
     services:
-      documentdb:
+      localhost:
         image: ghcr.io/microsoft/documentdb/documentdb-local:latest
         env:
           USERNAME: ciuser
@@ -41,7 +41,7 @@ jobs:
         env:
           DOCUMENTDB_IDENTITY: ciuser
           DOCUMENTDB_CREDENTIAL: cipassword
-          DOCUMENTDB_HOST: documentdb
+          DOCUMENTDB_HOST: localhost
           DOCUMENTDB_PORT: 10260
         run: |
           dotnet run validate.cs --results-directory "tst" --report-trx --report-trx-filename "results.trx" --no-ansi --ignore-exit-code "2"
