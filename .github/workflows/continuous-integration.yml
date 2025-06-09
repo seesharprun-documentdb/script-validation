@@ -45,10 +45,20 @@ jobs:
         working-directory: utilities
         run: |
           dotnet run generate.cs "tst/results.trx" --output-directory "ctrf" --output-filename "report.json" --test-tool "mstest"
+      - name: Upload TRX test results
+        uses: actions/upload-artifact@v4
+        with:
+          name: trx-test-results
+          path: 'utilities/**/tst/**/*.trx'
+      - name: Upload CTRF test report
+        uses: actions/upload-artifact@v4
+        with:
+          name: ctrf-test-report
+          path: 'utilities/**/ctrf/**/*.json'
       - name: Publish CTRF test report
         uses: ctrf-io/github-test-reporter@v1
         with:
-          report-path: 'utilities/**/ctrf/report*.json'
+          report-path: 'utilities/**/ctrf/**/*.json'
       
       
           
