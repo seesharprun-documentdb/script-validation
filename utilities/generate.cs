@@ -68,7 +68,6 @@ sealed class GenerateCommand(
         using StringWriter writer = new();
         using XmlWriter xmlWriter = XmlWriter.Create(writer, new()
         {
-            Encoding = Encoding.UTF8,
             Indent = true
         });
         xmlSerializer.Serialize(xmlWriter, input);
@@ -219,7 +218,7 @@ sealed class CtrfWriterService
         }
 
         using FileStream stream = destination.Open(FileMode.OpenOrCreate, FileAccess.Write, FileShare.Read);
-        using StreamWriter writer = new(stream, Encoding.UTF8);
+        using StreamWriter writer = new(stream);
 
         string json = JsonSerializer.Serialize(report, StaticJsonSerializerContext.Default.CtrfReport);
 
