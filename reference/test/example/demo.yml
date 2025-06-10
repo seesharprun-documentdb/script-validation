@@ -4,7 +4,7 @@ name: demo
 description: TODO
 summary: TODO
 syntax: TODO
-parameters:
+parameters: []
 examples:
   items:
     - title: System admin example

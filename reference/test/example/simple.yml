@@ -4,7 +4,7 @@ name: simple
 description: TODO
 summary: TODO
 syntax: TODO
-parameters:
+parameters: []
 examples:
   sample:
     set: products
