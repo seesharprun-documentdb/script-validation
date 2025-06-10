@@ -1,0 +1,143 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "NoSQLQueryReference",
+  "type": "object",
+  "required": [
+    "type",
+    "name",
+    "description",
+    "syntax",
+    "parameters",
+    "examples"
+  ],
+  "properties": {
+    "type": {
+      "type": "string",
+      "enum": [
+        "operator",
+        "command"
+      ]
+    },
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "summary": {
+      "type": "string"
+    },
+    "syntax": {
+      "type": "string"
+    },
+    "parameters": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "type",
+          "required"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "object",
+              "string",
+              "number",
+              "pattern"
+            ]
+          },
+          "required": {
+            "type": "boolean"
+          },
+          "description": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "examples": {
+      "type": "object",
+      "required": [
+        "items"
+      ],
+      "properties": {
+        "sample": {
+          "type": "object",
+          "required": [
+            "set",
+            "filter"
+          ],
+          "properties": {
+            "set": {
+              "type": "string",
+              "enum": [
+                "products",
+                "stores",
+                "employees"
+              ]
+            },
+            "filter": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "title",
+              "description",
+              "query"
+            ],
+            "properties": {
+              "title": {
+                "type": "string"
+              },
+              "explanation": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "query": {
+                "type": "string"
+              },
+              "output": {
+                "type": "object",
+                "required": [
+                  "value"
+                ],
+                "properties": {
+                  "devlang": {
+                    "type": "string",
+                    "enum": [
+                      "bson",
+                      "json",
+                      "plaintext"
+                    ]
+                  },
+                  "value": {
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
