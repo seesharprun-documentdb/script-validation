@@ -10,6 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    environment:
+      name: github
+      url: https://github.com/documentdb/docs
     steps:
       - name: Checkout source
         uses: actions/checkout@v4
