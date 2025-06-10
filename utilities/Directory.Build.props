@@ -7,10 +7,13 @@
   </PropertyGroup>
   <ItemGroup>
     <EmbeddedResource Include="../samples/**/*.mongo">
-      <LogicalName>validate.sample.$([System.String]::Copy('%(RecursiveDir)%(Filename)%(Extension)').Replace('/','.').Replace('\','.'))</LogicalName>
+      <LogicalName>utilities.sample.$([System.String]::Copy('%(RecursiveDir)%(Filename)%(Extension)').Replace('/','.').Replace('\','.'))</LogicalName>
     </EmbeddedResource>
     <EmbeddedResource Include="../reference/**/*.yml">
-      <LogicalName>validate.reference.$([System.String]::Copy('%(RecursiveDir)%(Filename)%(Extension)').Replace('/','.').Replace('\','.'))</LogicalName>
+      <LogicalName>utilities.reference.$([System.String]::Copy('%(RecursiveDir)%(Filename)%(Extension)').Replace('/','.').Replace('\','.'))</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="../templates/reference.mustache.tmpl">
+      <LogicalName>utilities.templates.reference.mustache.tmpl</LogicalName>
     </EmbeddedResource>
   </ItemGroup>
 </Project>

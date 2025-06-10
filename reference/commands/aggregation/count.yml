@@ -1,11 +1,11 @@
 ## YamlMime:NoSQLQueryReference
 type: command
 name: count
-description: |
+description: |-
   The `count` command is used to count the number of documents in a collection that match specific criteria.
-summary: |
+summary: |-
   This command is useful for obtaining quick statistics about the data stored in your collections, such as the number of documents that meet certain criteria.
-syntax: |
+syntax: |-
   db.collection.count(
     <query>,
     <options>
@@ -14,48 +14,48 @@ parameters:
   - name: query
     type: object
     required: true
-    description: |
+    description: |-
       A document specifying the selection criteria using query operators.
   - name: options
     type: object
     required: false
-    description: |
+    description: |-
       A document specifying options including, but not limited to `limit` and `skip`.
 examples:
   sample:
     set: stores
-    filter: |
+    filter: |-
       {}
   items:
     - title: Counting all documents in a collection
       explanation: |        
         Use the `count` command with an empty document to count **all** documents in a collection. 
-      description: |
+      description: |-
         In this example, all documents in the `stores` collection are counted.
-      query: |
+      query: |-
         db.stores.count({ "_id": "00000000-0000-0000-0000-000000003002" })
       output:
-        value: |
+        value: |-
           1
     - title: Counting documents that match nested criteria
-      explanation: |
+      explanation: |-
         The `query` parameter supports nested parameters.
-      description: |
+      description: |-
         In this example, the command counts documents that match the string value `"Incredible Discount Days"` for the `promotionEvents.eventName` field.
-      query: |
+      query: |-
         db.stores.count({ "promotionEvents.eventName": "Incredible Discount Days" })
       output:
-        value: |
+        value: |-
           2
     - title: Counting documents that match multiple criteria
-      explanation: |
+      explanation: |-
         The `query` parameter also supports multiple parameters.
-      description: |
+      description: |-
         In this example, the `locationLatitude` and `locationLongitude` parameters are used to count documents that match on these specific values.
-      query: |
+      query: |-
         db.stores.count({ "location.lat": -2.4111, "location.lon": 72.1041 })
       output:
-        value: |
+        value: |-
           1
 related:
   - reference: /operators/query/regex

@@ -8,9 +8,9 @@ parameters: []
 examples:
   items:
     - title: System admin example
-      description: |
+      description: |-
         TODO
-      query: |
+      query: |-
         db.runCommand({
           ping: 1
         });

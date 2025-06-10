@@ -1,0 +1,29 @@
+name: Continuous Deployment
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    name: Build Markdown
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: | 
+            10.x
+      - name: Generate Markdown
+        working-directory: utilities
+        run: |
+          dotnet run transform.cs
+      - name: Upload Markdown content
+        uses: actions/upload-artifact@v4
+        with:
+          name: markdown-content
+          path: 'utilities/**/out/**/*.md'

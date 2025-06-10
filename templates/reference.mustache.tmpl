@@ -1,0 +1,71 @@
+---
+title: {{ name }} {{ type }}
+description: {{ description }}
+ms.date: {{ date }}
+appliesto:
+  - Azure Cosmos DB for MongoDB vCore
+  - DocumentDB
+---
+
+# `{{{ name }}}`
+
+{{ description }}
+
+{{ summary }}
+
+## Syntax
+
+```documentdb
+{{{ syntax }}}
+```
+{{ #renderParameters }}
+
+## Parameters
+
+| | Type | Description |
+| --- | --- | --- |
+{{ #parameters }}
+| **`{{{ name }}}`** | `{{ type }}` | {{ description }} |
+{{ /parameters }}
+{{ /renderParameters }}
+{{ #renderExamples }}
+
+## Examples
+
+TODO
+{{ #useSample }}
+
+Consider this sample set of documents within the `{{ examples.sample.set }}` collection for these examples.
+
+```bson
+[]
+```
+{{ /useSample }}
+{{ #examples.items }}
+
+### {{ title }}
+{{ #explanation }}
+
+{{ explanation }}
+{{ /explanation }}
+{{ #description }}
+
+{{ description }}
+{{ /description }}
+
+```documentdb
+{{{ query }}}
+```
+
+```{{ output.devlang }}
+{{{ output.value }}}
+```
+{{ /examples.items }}
+{{ /renderExamples }}
+
+## Related content
+
+- [DocumentDB query reference](../../index.md)
+{{ #resources }}
+- [`{{ title }}`](../..{{ link }}.md)
+{{ /resources }}

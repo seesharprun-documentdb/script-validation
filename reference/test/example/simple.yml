@@ -8,7 +8,7 @@ parameters: []
 examples:
   sample:
     set: products
-    filter: |
+    filter: |-
       { 
         "subCategory": { 
           "$in": ["Forks", "Bike Stands"] 
@@ -16,20 +16,20 @@ examples:
       }
   items:
     - title: Basic count example
-      description: |
+      description: |-
         TODO
-      query: |
+      query: |-
         db.products.count({
           subCategory: "Forks"
         });
       output:
-        devlang: bson
-        value: |
+        devlang: plaintext
+        value: |-
           2
     - title: Complex aggregate example
-      description: |
+      description: |-
         TODO
-      query: |
+      query: |-
         db.products.aggregate([
           {
             $match: {
@@ -42,5 +42,5 @@ examples:
         ]);
       output:
         devlang: bson
-        value: |
+        value: |-
           [ { totalProducts: 1 } ]

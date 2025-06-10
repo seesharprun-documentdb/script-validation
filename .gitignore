@@ -12,6 +12,9 @@ tst/
 ctrf/
 ctrf/**/*.json
 
+# Template output
+out/
+
 # dotenv files
 .env
 
