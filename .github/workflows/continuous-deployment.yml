@@ -29,7 +29,8 @@ jobs:
         working-directory: utilities/out
         run: |
           echo "## Generated Markdown content" >> $GITHUB_STEP_SUMMARY
-          dir **/*.md | sed 's/^/ - /' >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          find . -name '*.md' | sed 's/^/ - /' >> $GITHUB_STEP_SUMMARY
       - name: Upload Markdown content
         uses: actions/upload-artifact@v4
         with:
