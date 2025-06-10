@@ -40,50 +40,46 @@ static bool filter(string resource) =>
 
 IEnumerable<string> resources = Assembly.GetExecutingAssembly().GetManifestResourceNames().Where(filter);
 
-var tree = new Tree("[bold yellow]Generating Markdown files...[/]");
+Tree tree = new("[bold yellow]Generating Markdown files...[/]");
 
-await AnsiConsole.Live(tree)
-    .StartAsync(async context =>
+foreach (string resource in resources)
+{
+    TreeNode node = tree.AddNode($"[green]Reading [italic]{resource}[/][/]");
+
+    using Stream yamlStream = Assembly.GetExecutingAssembly().GetManifestResourceStream(resource)
+        ?? throw new InvalidOperationException($"Resource '{resource}' not found.");
+    using StreamReader yamlReader = new(yamlStream);
+    NoSQLQueryReference reference = yamlDeserializer.Deserialize<NoSQLQueryReference>(yamlReader)
+        ?? throw new InvalidOperationException($"Failed to deserialize resource '{resource}'.");
+
+    Payload payload = mapper.Map<Payload>(reference) with
     {
-        foreach (string resource in resources)
-        {
-            tree.AddNode($"[green]Reading [italic]{resource}[/][/]");
-            context.Refresh();
+        Date = $"{DateTime.UtcNow.Date:MM/dd/yyyy}",
+        Resources = reference.Related?.Select(r => new PayloadResource { Title = Extensions.ReferenceSplitRegex().Match(r.Reference).Value, Link = r.Reference }) ?? [],
+        RenderParameters = reference.Parameters?.Any() ?? false,
+        RenderExamples = reference.Examples?.Items?.Any() ?? false,
+        UseSample = reference.Examples?.Sample is not null,
+    };
+    string output = renderer(payload).Trim();
 
-            using Stream yamlStream = Assembly.GetExecutingAssembly().GetManifestResourceStream(resource)
-                ?? throw new InvalidOperationException($"Resource '{resource}' not found.");
-            using StreamReader yamlReader = new(yamlStream);
-            NoSQLQueryReference reference = yamlDeserializer.Deserialize<NoSQLQueryReference>(yamlReader)
-                ?? throw new InvalidOperationException($"Failed to deserialize resource '{resource}'.");
+    string outDir = Path.Combine(Directory.GetCurrentDirectory(), "out");
 
-            Payload payload = mapper.Map<Payload>(reference) with
-            {
-                Date = $"{DateTime.UtcNow.Date:MM/dd/yyyy}",
-                Resources = reference.Related?.Select(r => new PayloadResource { Title = Extensions.ReferenceSplitRegex().Match(r.Reference).Value, Link = r.Reference }) ?? [],
-                RenderParameters = reference.Parameters?.Any() ?? false,
-                RenderExamples = reference.Examples?.Items?.Any() ?? false,
-                UseSample = reference.Examples?.Sample is not null,
-            };
-            string output = renderer(payload).Trim();
+    if (!Directory.Exists(outDir))
+    {
+        Directory.CreateDirectory(outDir);
+    }
 
-            string outDir = Path.Combine(Directory.GetCurrentDirectory(), "out");
+    string outFile = Path.Combine(outDir, $"{resource.Replace(".yml", ".generated.md", StringComparison.OrdinalIgnoreCase)}");
 
-            if (!Directory.Exists(outDir))
-            {
-                Directory.CreateDirectory(outDir);
-            }
+    string relativeOutFile = Path.GetRelativePath(Directory.GetCurrentDirectory(), outFile);
+    node.AddNode($"[blue]Writing to [italic]{relativeOutFile}[/][/]");
 
-            string outFile = Path.Combine(outDir, $"{resource.Replace(".yml", ".generated.md", StringComparison.OrdinalIgnoreCase)}");
+    using FileStream fileStream = File.Open(outFile, FileMode.Create, FileAccess.Write, FileShare.Read);
+    using StreamWriter fileWriter = new(fileStream);
+    await fileWriter.WriteAsync(output);
+}
 
-            string relativeOutFile = Path.GetRelativePath(Directory.GetCurrentDirectory(), outFile);
-            tree.AddNode($"[blue]Writing to [italic]{relativeOutFile}[/][/]");
-            context.Refresh();
-
-            using FileStream fileStream = File.Open(outFile, FileMode.Create, FileAccess.Write, FileShare.Read);
-            using StreamWriter fileWriter = new(fileStream);
-            await fileWriter.WriteAsync(output);
-        }
-    });
+AnsiConsole.Write(tree);
 
 partial class Extensions
 {

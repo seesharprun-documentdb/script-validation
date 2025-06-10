@@ -25,6 +25,11 @@ jobs:
         working-directory: utilities
         run: |
           dotnet run transform.cs
+      - name: Write step summary output
+        working-directory: utilities/out
+        run: |
+          echo "## Generated Markdown content" >> $GITHUB_STEP_SUMMARY
+          dir utilities/out/**/*.md | sed 's/^/ - /' >> $GITHUB_STEP_SUMMARY
       - name: Upload Markdown content
         uses: actions/upload-artifact@v4
         with:
