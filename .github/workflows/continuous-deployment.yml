@@ -10,9 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-    environment:
-      name: github
-      url: https://github.com/documentdb/docs
     steps:
       - name: Checkout source
         uses: actions/checkout@v4
@@ -25,14 +22,26 @@ jobs:
         working-directory: utilities
         run: |
           dotnet run transform.cs
-      - name: Write step summary output
-        working-directory: utilities/out
-        run: |
-          echo "### Generated Markdown content 🚀" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          find . -name '*.md' | sed 's/^/ - /' >> $GITHUB_STEP_SUMMARY
       - name: Upload Markdown content
         uses: actions/upload-artifact@v4
         with:
           name: markdown-content
           path: 'utilities/**/out/**/*.md'
+  push:
+    name: Create GitHub pull request
+    runs-on: ubuntu-latest
+    needs:
+      - build
+    environment:
+      name: github
+      url: https://github.com/documentdb/docs/pulls
+    steps:
+      - name: Download Markdown content
+        uses: actions/download-artifact@v4
+        with:
+          name: markdown-content
+      - name: Write step summary output
+        run: |
+          echo "### Generated Markdown content 🚀" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          find . -name '*.md' | sed 's/^/ - /' >> $GITHUB_STEP_SUMMARY
